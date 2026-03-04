@@ -1,0 +1,130 @@
+Assignment 6 Python Programs Classes & Objects
+a)Python Program to Create a Class which Performs Basic Calculator Operations
+class Calculator:
+    def __init__(self, a1, b1):
+        self.a = a1
+        self.b = b1
+
+    def add(self):
+        return self.a + self.b
+
+    def subtract(self):
+        return self.a - self.b
+
+    def multiply(self):
+        return self.a * self.b
+
+    def divide(self):
+        if self.b == 0:
+            return "Division by zero is not allowed"
+        return self.a / self.b
+
+
+# Input from user
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+# Object creation using constructor
+calc = Calculator(a, b)
+
+print("Addition:", calc.add())
+print("Subtraction:", calc.subtract())
+print("Multiplication:", calc.multiply())
+print("Division:", calc.divide())
+
+output
+Enter first number: 20
+Enter second number: 40
+Addition: 60
+Subtraction: -20
+Multiplication: 800
+Division: 0.5
+
+b)Python Program to Append, Delete and Display Elements of a List using Classes
+class ListOperations:
+    def __init__(self):
+        self.lst = []   # empty list
+
+    def append_element(self):
+        item = int(input("Enter element to append: "))
+        self.lst.append(item)
+        print("Element added successfully")
+
+    def delete_element(self):
+        item = int(input("Enter element to delete: "))
+        if item in self.lst:
+            self.lst.remove(item)
+            print("Element deleted successfully")
+        else:
+            print("Element not found")
+
+    def display_list(self):
+        if not self.lst:
+            print("List is empty")
+        else:
+            print("List elements:", self.lst)
+
+
+# Object creation
+obj = ListOperations()
+
+while True:
+    print("\n1. Append")
+    print("2. Delete")
+    print("3. Display")
+    print("4. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        obj.append_element()
+    elif choice == 2:
+        obj.delete_element()
+    elif choice == 3:
+        obj.display_list()
+    elif choice == 4:
+        print("Program terminated")
+        break
+    else:
+        print("Invalid choice")
+
+
+output
+1. Append
+2. Delete
+3. Display
+4. Exit
+Enter your choice: 1
+Enter element to append: 10
+Element added successfully
+1. Append
+2. Delete
+3. Display
+4. Exit
+Enter your choice: 1
+Enter element to append: 20
+Element added successfully
+1. Append
+2. Delete
+3. Display
+4. Exit
+Enter your choice: 3
+List elements: [10, 20]
+1. Append
+2. Delete
+3. Display
+4. Exit
+Enter your choice: 2
+Enter element to delete: 10
+Element deleted successfully
+1. Append
+2. Delete
+3. Display
+4. Exit
+Enter your choice: 3
+List elements: [20]
+1. Append
+2. Delete
+3. Display
+4. Exit
+Enter your choice:

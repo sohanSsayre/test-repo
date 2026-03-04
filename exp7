@@ -1,0 +1,40 @@
+# a)Python Program to Perform CRUD Operations
+
+import sqlite3
+
+# Connect database
+con = sqlite3.connect("student.db")
+cur = con.cursor()
+
+# Create table
+cur.execute("CREATE TABLE IF NOT EXISTS student(id INT, name TEXT, marks INT)")
+
+# Insert data
+cur.execute("INSERT INTO student VALUES (1, 'Rahul', 80)")
+print("Data Inserted")
+
+# Update data
+cur.execute("UPDATE student SET marks = 90 WHERE id = 1")
+print("Data Updated")
+
+# Display data
+cur.execute("SELECT * FROM student")
+data = cur.fetchall()
+print("Student Table:")
+for row in data:
+    print(row)
+
+# Delete data
+cur.execute("DELETE FROM student WHERE id = 1")
+print("Data Deleted")
+
+con.commit()
+con.close()
+
+# OutPut
+
+# Data Inserted
+# Data Updated
+# Student Table:
+# (1, 'Rahul', 90)
+# Data Deleted

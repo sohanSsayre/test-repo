@@ -1,0 +1,89 @@
+a) Write python program for find Largest and Smallest Element without sort function
+lst = [12, 45, 7, 30]
+
+largest = lst[0]
+smallest = lst[0]
+
+for n in lst:
+    if n > largest:
+        largest = n
+    if n < smallest:
+        smallest = n
+
+print("Largest:", largest)
+print("Smallest:", smallest)
+
+output
+Largest: 45
+Smallest: 7
+
+b) Write python program for Remove Duplicate Elements
+
+lst = [1, 2, 2, 3, 4, 4, 5]
+new_list = []
+
+for i in lst:
+    if i not in new_list:
+        new_list.append(i)
+
+print("List without duplicates:", new_list)
+
+c)Python Program to Find Largest Number in a List Element witht sort function
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+a.sort()
+print("Largest element is:",a[n-1])
+output
+ 
+Case 1:
+Enter number of elements:3
+Enter element:23
+Enter element:567
+Enter element:3
+Largest element is: 567
+ 
+Case 2:
+Enter number of elements:4
+Enter element:34
+Enter element:56
+Enter element:24
+Enter element:54
+Largest element is: 56
+d)Python Program to Find the Second Largest Number in a List using Bubble Sort
+ # Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j]>a[j+1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp 
+print('Second largest number is:',a[n-2])
+
+Output:-
+ 
+Case 1:
+Enter number of elements:4
+Enter element:56
+Enter element:43
+Enter element:78
+Enter element:12
+('Second largest number is:', 56)
+ 
+Case 2:
+Enter number of elements:6
+Enter element:23
+Enter element:45
+Enter element:94
+Enter element:10
+Enter element:34
+Enter element:95
+('Second largest number is:', 94)

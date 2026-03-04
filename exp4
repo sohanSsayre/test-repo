@@ -1,0 +1,68 @@
+Assignment4 Python Programs on Dictionary and tuplea) Write python program to Perform basic dictionary operations
+
+my_dict = {'name': 'Alice', 'age': 35, 'city': 'New York'}
+print(f"Original dictionary: {my_dict}")
+
+# Add a new key-value pair
+my_dict['profession'] = 'Doctor'
+print(f"Updated dictionary after adding 'profession': {my_dict}")
+
+# Modify Value
+my_dict['age'] = 40
+print(f"Updated dictionary after modification: {my_dict}")
+
+# print key
+print('City:', my_dict['city'])
+OutPut:-
+Original dictionary: {'name': 'Alice', 'age': 35, 'city': 'New York'}
+Updated dictionary after adding 'profession': {'name': 'Alice', 'age': 35, 'city': 'New York', 'profession': 'Doctor'}
+Updated dictionary after modification: {'name': 'Alice', 'age': 40, 'city': 'New York', 'profession': 'Doctor'}
+City: New York
+b) Write python program for Count Character Frequencies
+def count_char_frequencies(input_string):
+  frequency_dict = {}
+  for char in input_string:
+    # Use get() method: if char is in dict, get its value; otherwise, default to 0
+    frequency_dict[char] = frequency_dict.get(char, 0) + 1
+  return frequency_dict
+
+string1 = 'Jessa'
+print(f"Frequencies for '{string1}': {count_char_frequencies(string1)}")
+
+Output:-
+Frequencies for 'Jessa': {'J': 1, 'e': 1, 's': 2, 'a': 1}
+c) Write python program for to perform basic operation of tuple
+# 1. Create a Tuple
+my_tuple = (1, 2, 3, 4, 5)
+print(f"My tuple: {my_tuple}")
+
+# 2. Access Elements
+third_element = my_tuple[2] # Index 2 corresponds to the third element
+print(f"The third element of my_tuple: {third_element}")
+
+# 3. Tuple Length
+tuple_length = len(my_tuple)
+print(f"The length of my_tuple: {tuple_length}")
+
+# 4 Concatenate two tuples.
+tup1 = (1, 2, 3)
+tup2 = (4, 5, 6)
+result = tup1 + tup2
+print(result)
+
+output
+My tuple: (1, 2, 3, 4, 5)
+The third element of my_tuple: 3
+The length of my_tuple: 5
+d) Write python program for the product of all elements in a tuple.
+def product_tuple(tup):
+    product = 1
+    for x in tup:
+        product *= x
+    return product
+
+tup = (1, 2, 3, 4, 5)
+result = product_tuple(tup)
+print(result)  
+
+# Output: 120

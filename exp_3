@@ -1,0 +1,201 @@
+Assignment3 Python Programs on Strings
+1)Python Program to Replace All Occurrences of ‘a’ with $ in a String
+
+original_list = ["apple", "banana", "cherry", "date"]
+new_list = []
+for s in original_list:
+    modified_string = s.replace('a', '$')
+    new_list.append(modified_string)
+print(new_list)
+
+Output:
+['$pple', 'b$n$n$', 'cherry', 'd$te']
+
+2)Python Program to string function
+# Python String Functions Example
+
+s = "  Hello Python Programming  "
+
+print("Original String:", s)
+
+# 1. length
+print("Length:", len(s))
+
+# 2. upper()
+print("Uppercase:", s.upper())
+
+# 3. lower()
+print("Lowercase:", s.lower())
+
+# 4. title()
+print("Title Case:", s.title())
+
+# 5. capitalize()
+print("Capitalize:", s.capitalize())
+
+# 6. strip() Remove spaces at the beginning and at the end of the string:
+print("Strip:", s.strip())
+
+# 7. lstrip()
+print("Left Strip:", s.lstrip())
+
+# 8. rstrip()
+print("Right Strip:", s.rstrip())
+
+# 9. replace()
+print("Replace Python with Java:", s.replace("Python", "Java"))
+
+# 10. find()
+print("Find 'Python':", s.find("Python"))
+
+# 11. index()
+print("Index of 'Python':", s.index("Python"))
+# find() returns the index or -1 if not found
+# index() same as find(), but raises a ValueError if not found
+
+# 12. count()
+print("Count of 'o':", s.count("o"))
+
+# 13. startswith()
+print("Starts with '  Hello':", s.startswith("  Hello"))
+
+# 14. endswith()
+print("Ends with 'Programming  ':", s.endswith("Programming  "))
+
+# 15. split()
+words = s.split()
+print("Split:", words)
+
+# 16. join()
+new_string = "-".join(words)
+print("Join:", new_string)
+
+# 17. isalpha()
+print("Is Alpha:", "Python".isalpha())
+
+# 18. isdigit()
+print("Is Digit:", "123".isdigit())
+
+# 19. isalnum()
+print("Is Alphanumeric:", "Python123".isalnum())
+
+# 20. islower()
+print("Is Lower:", "python".islower())
+
+# 21. isupper()
+print("Is Upper:", "PYTHON".isupper())
+
+# 22. isspace()
+print("Is Space:", "   ".isspace())
+
+# 23. swapcase()
+print("Swapcase:", s.swapcase())
+
+# 24. center()
+print("Center:", "Python".center(20, "*"))
+
+# 25. zfill()
+print("Zfill:", "123".zfill(6))
+
+# 26. format()
+print("Length: {}".format(len(s)))
+
+
+Output:-
+Original String:   Hello Python Programming  
+Length: 28
+Uppercase:   HELLO PYTHON PROGRAMMING
+Lowercase:   hello python programming
+Title Case:   Hello Python Programming
+Capitalize:   hello python programming
+Strip: Hello Python Programming
+Left Strip: Hello Python Programming
+Right Strip:   Hello Python Programming
+Replace Python with Java:   Hello Java Programming
+Find 'Python': 8
+Index of 'Python': 8
+Count of 'o': 3
+Starts with '  Hello': True
+Ends with 'Programming  ': True
+Split: ['Hello', 'Python', 'Programming']
+Join: Hello-Python-Programming
+Is Alpha: True
+Is Digit: True
+Is Alphanumeric: True
+Is Lower: True
+Is Upper: True
+Is Space: True
+Swapcase:   hELLO pYTHON pROGRAMMING
+Center: *******Python*******
+Zfill: 000123
+Length: 28
+
+
+3)Python Program to String Slicing
+# String Slicing in Python
+
+s = "PythonProgramming"
+
+print("Original String:", s)
+
+# 1. Basic slicing [start:end]
+print("s[0:6]  :", s[0:6])      # Python
+print("s[6:17] :", s[6:17])     # Programming
+
+# 2. Slicing with start only
+print("s[6:]   :", s[6:])       # Programming
+
+# 3. Slicing with end only
+print("s[:6]   :", s[:6])       # Python
+
+# 4. Negative indexing
+print("s[-11:] :", s[-11:])     # Programming
+print("s[:-11] :", s[:-11])     # Python
+
+# 5. Slicing with step
+print("s[::2]  :", s[::2])      # Every second character
+print("s[1::2] :", s[1::2])     # Alternate characters
+
+# 6. Reverse string using slicing
+print("Reverse :", s[::-1])
+
+# 7. Reverse word using slicing
+print("Reverse first word:", s[5::-1])  # nohtyP
+
+OutPut:-
+Original String: PythonProgramming
+s[0:6]  : Python
+s[6:17] : Programming
+s[6:]   : Programming
+s[:6]   : Python
+s[-11:] : Programming
+s[:-11] : Python
+s[::2]  : PtoPormig
+s[1::2] : yhnrgamn
+Reverse : gnimmargorPnohtyP
+Reverse first word: nohtyP
+
+
+
+4)Python Program to Count Vowels and Consonants 
+# Python Program to Count Vowels and Consonants
+
+s = input("Enter a string: ")
+
+vowels = 0
+consonants = 0
+
+for ch in s:
+    if ch.isalpha():              # check alphabet
+        if ch in "aeiouAEIOU":
+            vowels += 1
+        else:
+            consonants += 1
+
+print("Number of Vowels:", vowels)
+print("Number of Consonants:", consonants)
+
+OutPut
+Enter a string: Python Programming
+Number of Vowels: 4
+Number of Consonants: 13

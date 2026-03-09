@@ -1,0 +1,2 @@
+Hello, Python file handling is easy with Python!
+This line was appended later.

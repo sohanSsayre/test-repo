@@ -1,5 +1,5 @@
-Assignment 6 Python Programs Classes & Objects
-a)Python Program to Create a Class which Performs Basic Calculator Operations
+# Assignment 6 Python Programs Classes & Objects
+# a)Python Program to Create a Class which Performs Basic Calculator Operations
 class Calculator:
     def __init__(self, a1, b1):
         self.a = a1
@@ -32,15 +32,15 @@ print("Subtraction:", calc.subtract())
 print("Multiplication:", calc.multiply())
 print("Division:", calc.divide())
 
-output
-Enter first number: 20
-Enter second number: 40
-Addition: 60
-Subtraction: -20
-Multiplication: 800
-Division: 0.5
+# output
+# Enter first number: 20
+# Enter second number: 40
+# Addition: 60
+# Subtraction: -20
+# Multiplication: 800
+# Division: 0.5
 
-b)Python Program to Append, Delete and Display Elements of a List using Classes
+# b)Python Program to Append, Delete and Display Elements of a List using Classes
 class ListOperations:
     def __init__(self):
         self.lst = []   # empty list
@@ -89,42 +89,42 @@ while True:
         print("Invalid choice")
 
 
-output
-1. Append
-2. Delete
-3. Display
-4. Exit
-Enter your choice: 1
-Enter element to append: 10
-Element added successfully
-1. Append
-2. Delete
-3. Display
-4. Exit
-Enter your choice: 1
-Enter element to append: 20
-Element added successfully
-1. Append
-2. Delete
-3. Display
-4. Exit
-Enter your choice: 3
-List elements: [10, 20]
-1. Append
-2. Delete
-3. Display
-4. Exit
-Enter your choice: 2
-Enter element to delete: 10
-Element deleted successfully
-1. Append
-2. Delete
-3. Display
-4. Exit
-Enter your choice: 3
-List elements: [20]
-1. Append
-2. Delete
-3. Display
-4. Exit
-Enter your choice:
+# output
+# 1. Append
+# 2. Delete
+# 3. Display
+# 4. Exit
+# Enter your choice: 1
+# Enter element to append: 10
+# Element added successfully
+# 1. Append
+# 2. Delete
+# 3. Display
+# 4. Exit
+# Enter your choice: 1
+# Enter element to append: 20
+# Element added successfully
+# 1. Append
+# 2. Delete
+# 3. Display
+# 4. Exit
+# Enter your choice: 3
+# List elements: [10, 20]
+# 1. Append
+# 2. Delete
+# 3. Display
+# 4. Exit
+# Enter your choice: 2
+# Enter element to delete: 10
+# Element deleted successfully
+# 1. Append
+# 2. Delete
+# 3. Display
+# 4. Exit
+# Enter your choice: 3
+# List elements: [20]
+# 1. Append
+# 2. Delete
+# 3. Display
+# 4. Exit
+# Enter your choice:
